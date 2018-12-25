@@ -1,2 +1,6 @@
+main:
+  #Interior requires WorldEdit!
+  enable-interior: true
 brush:
   maxSize: 5
+
