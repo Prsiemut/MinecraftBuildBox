@@ -8,6 +8,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 public class MinecraftBuildingBox extends JavaPlugin {
 
     private static MinecraftBuildingBox instance;
@@ -33,6 +35,9 @@ public class MinecraftBuildingBox extends JavaPlugin {
         if(ConfigManager.interiorIsEnable()) {
             commandHandler.registerNewCommmand("mi", new mi_command());
         }
+
+        File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/sessions/");
+        file.mkdirs();
 
     }
 
