@@ -1,5 +1,7 @@
 package de.prisemut.mbb;
 
+import de.prisemut.mbb.commands.CommandHandler;
+import de.prisemut.mbb.commands.wcreate_command;
 import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,6 +19,11 @@ public class MinecraftBuildingBox extends JavaPlugin {
         Config
          */
         ConfigManager.setupConfig();
+
+        getCommand("mbb").setExecutor(new CommandHandler());
+        CommandHandler commandHandler = new CommandHandler();
+        commandHandler.registerNewCommmand("wcreate", new wcreate_command());
+
     }
 
     @Override

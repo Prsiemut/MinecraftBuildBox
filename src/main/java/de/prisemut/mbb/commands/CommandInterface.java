@@ -8,5 +8,7 @@ public interface CommandInterface {
     void run(CommandSender sender, Command command, String label, String[] args);
 
     String usage();
-    
+
+    String info();
+
 }
