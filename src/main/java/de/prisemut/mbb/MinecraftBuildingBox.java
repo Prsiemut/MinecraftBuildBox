@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class MinecraftBuildingBox extends JavaPlugin {
 
     private static MinecraftBuildingBox instance;
+    public static String prefix = "§8[§bMBB§8] ";
 
     @Override
     public void onEnable() {
