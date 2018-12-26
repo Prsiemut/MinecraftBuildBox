@@ -13,46 +13,81 @@ import java.util.Hashtable;
 public class CommandHandler implements CommandExecutor {
 
     private static Hashtable<String, CommandInterface> registry = new Hashtable<String, CommandInterface>();
-    private static ArrayList<String> registryList = new ArrayList<String>();
-    private static Hashtable<String, String> usage = new Hashtable<String, String>();
-    private static Hashtable<String, String> info = new Hashtable<String, String>();
+    private static ArrayList<String> registrylist = new ArrayList<String>();
+    private static Hashtable<String, String> descriptionmap = new Hashtable<String, String>();
+    private static Hashtable<String, String> usagemap = new Hashtable<String, String>();
+    private static Hashtable<String, String> permissions = new Hashtable<String, String>();
 
-    public CommandHandler(){
+    public CommandHandler() {
     }
 
-    public void registerNewCommmand(String name, CommandInterface command) {
-        registry.put(name, command);
-        registryList.add(name);
-        usage.put(name, getExecutor(name).usage());
-        info.put(name, getExecutor(name).info());
+    public void registerNewCommand(String name, CommandInterface cmd) {
+        registry.put(name, cmd);
+        registrylist.add(name);
+
+        descriptionmap.put(name, getExecutor(name).info());
+        usagemap.put(name, getExecutor(name).usage());
+    }
+
+    public void setPermisson(String name, String permission) {
+        permissions.put(name, permission);
     }
 
     public ArrayList<String> getRegistryList() {
-        return registryList;
+        return registrylist;
+    }
+
+    public void setDescription(String name, String description) {
+        descriptionmap.put(name, description);
+    }
+
+    public String getDescription(String name) {
+        return getExecutor(name).info();
+    }
+
+    public void setUsage(String name, String usage) {
+        usagemap.put(name, usage);
+    }
+
+    public String getUsage(String name) {
+        return getExecutor(name).usage();
+    }
+
+    public boolean Commandexists(String name) {
+        return registry.containsKey(name);
     }
 
     public CommandInterface getExecutor(String name) {
         return registry.get(name);
     }
 
-    public boolean commandExisits(String worldname) {
-        return registry.containsKey(worldname);
-    }
+    public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 
-    public String getInfo(String name) {
-        return getExecutor(name).info();
-    }
+        if (args.length == 0 || args[0].equals("help") || !Commandexists(args[0])) {
 
+            Player player;
+            if (cs instanceof Player) {
+                player = (Player) cs;
 
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
-        Player player = (Player)commandSender;
-        Messages m = new Messages(player);
-        if(args.length == 0 || args[0].equals("help") || !commandExisits(args[0])) {
-            for(String commands : getRegistryList()) {
-                m.sendMessage("§7 "+getInfo(commands) + " - "+getExecutor(commands).usage());
+                Messages messages = new Messages(player);
+
+                for (String command : getRegistryList()) {
+                        messages.sendMessage("§7" + getUsage(command) + " - " + getDescription(command));
+                }
+
+                return true;
+            } else {
+
+                for (String command : getRegistryList()) {
+                    cs.sendMessage("§7" + getUsage(command) + " - " + getDescription(command));
+                }
+
+                return true;
             }
         }
-        getExecutor(args[0]).run(commandSender, command, s, args);
+
+        getExecutor(args[0]).run(cs, cmd, label, args);
+
         return true;
     }
 }

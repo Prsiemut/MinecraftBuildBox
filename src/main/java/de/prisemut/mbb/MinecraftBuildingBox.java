@@ -1,8 +1,6 @@
 package de.prisemut.mbb;
 
-import de.prisemut.mbb.commands.CommandHandler;
-import de.prisemut.mbb.commands.mi_command;
-import de.prisemut.mbb.commands.wcreate_command;
+import de.prisemut.mbb.commands.*;
 import de.prisemut.mbb.interior.listener.InventoryListener;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -31,13 +29,17 @@ public class MinecraftBuildingBox extends JavaPlugin {
 
         getCommand("mbb").setExecutor(new CommandHandler());
         CommandHandler commandHandler = new CommandHandler();
-        commandHandler.registerNewCommmand("wcreate", new wcreate_command());
+        commandHandler.registerNewCommand("wcreate", new wcreate_command());
+        commandHandler.registerNewCommand("wdelete", new wdelete_command());
+        commandHandler.registerNewCommand("wtp", new wtp_command());
         if(ConfigManager.interiorIsEnable()) {
-            commandHandler.registerNewCommmand("mi", new mi_command());
+            commandHandler.registerNewCommand("mi", new mi_command());
         }
 
-        File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/sessions/");
+        File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();
+
+
 
     }
 
