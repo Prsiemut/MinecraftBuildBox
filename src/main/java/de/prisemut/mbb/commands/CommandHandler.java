@@ -47,11 +47,12 @@ public class CommandHandler implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         Player player = (Player)commandSender;
         Messages m = new Messages(player);
-        if(args.length <= 0 || args[0].equalsIgnoreCase("help")) {
+        if(args.length == 0 || args[0].equals("help") || !commandExisits(args[0])) {
             for(String commands : getRegistryList()) {
-                m.sendMessage(" "+getInfo(commands) + " - "+getExecutor(commands).usage());
+                m.sendMessage("§7 "+getInfo(commands) + " - "+getExecutor(commands).usage());
             }
         }
-        return false;
+        getExecutor(args[0]).run(commandSender, command, s, args);
+        return true;
     }
 }

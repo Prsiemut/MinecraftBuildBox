@@ -20,6 +20,6 @@ public class mi_command implements CommandInterface{
     }
 
     public String info() {
-        return "<mi>";
+        return "Manuell interior tool!";
     }
 }
