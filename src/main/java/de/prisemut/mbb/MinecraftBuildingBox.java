@@ -11,7 +11,7 @@ import java.io.File;
 public class MinecraftBuildingBox extends JavaPlugin {
 
     private static MinecraftBuildingBox instance;
-    public static String prefix = "§8[§bMBB§8] ";
+    public static String prefix = "§8[§bMBB§8] §7";
 
     @Override
     public void onEnable() {
@@ -23,18 +23,16 @@ public class MinecraftBuildingBox extends JavaPlugin {
         Config
          */
         ConfigManager.setupConfig();
-        if(ConfigManager.interiorIsEnable()) {
             Bukkit.getPluginManager().registerEvents(new InventoryListener(), this);
-        }
 
         getCommand("mbb").setExecutor(new CommandHandler());
         CommandHandler commandHandler = new CommandHandler();
         commandHandler.registerNewCommand("wcreate", new wcreate_command());
         commandHandler.registerNewCommand("wdelete", new wdelete_command());
         commandHandler.registerNewCommand("wtp", new wtp_command());
-        if(ConfigManager.interiorIsEnable()) {
-            commandHandler.registerNewCommand("mi", new mi_command());
-        }
+        commandHandler.registerNewCommand("wlist", new wlist_command());
+        commandHandler.registerNewCommand("mi", new mi_command());
+
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();

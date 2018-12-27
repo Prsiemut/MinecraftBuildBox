@@ -41,7 +41,7 @@ public class wcreate_command implements CommandInterface{
     }
 
     public String usage() {
-        return "wcreate [Name] [FLAT, MF, MF+ or -cwc] (Layer1 e.g. Bedrock) (Layer2 e.g. Grass)";
+        return "wcreate [Name] [FLAT, MF, MF+ or cwc] <for cwc: (Layer1 e.g. BedrockID: 7) (Layer2 e.g. GrassID: 2)>";
     }
 
     public String info() {
