@@ -36,6 +36,8 @@ public class MinecraftBuildingBox extends JavaPlugin {
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();
+        File file2 = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/hmaps/");
+        file2.mkdirs();
 
 
 

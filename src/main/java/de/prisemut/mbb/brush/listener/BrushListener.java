@@ -29,7 +29,7 @@ public class BrushListener implements Listener {
                     if(BrushCommand.edit.get(player).equals(BrushTypes.CUBE_BRUSH)) {
                         bm.runBrush("cube", event.getClickedBlock().getLocation(), BrushCommand.editSize.get(player), Material.STONE, player);
                     }
-                    
+
                 } else {
                     messages.sendMessage("Please click on a block!");
                 }
