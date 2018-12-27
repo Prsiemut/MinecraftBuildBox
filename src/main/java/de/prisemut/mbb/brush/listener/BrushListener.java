@@ -20,21 +20,22 @@ public class BrushListener implements Listener {
         Player player = event.getPlayer();
         Messages messages = new Messages(player);
 
-        if(event.getItem().getType().equals(Material.BLAZE_ROD) && BrushCommand.edit.containsKey(player) && event.getItem() != null) {
-            if(event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                if(event.getClickedBlock() != null) {
+        if (event.getItem() != null) {
+            if (event.getItem().getType() == Material.BLAZE_ROD && BrushCommand.edit.containsKey(player)) {
+                if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+                    if (event.getClickedBlock() != null) {
 
-                    BrushManager bm = new BrushManager();
+                        BrushManager bm = new BrushManager();
 
-                    if(BrushCommand.edit.get(player).equals(BrushTypes.CUBE_BRUSH)) {
-                        bm.runBrush("cube", event.getClickedBlock().getLocation(), BrushCommand.editSize.get(player), Material.STONE, player);
+                        if (BrushCommand.edit.get(player).equals(BrushTypes.CUBE_BRUSH)) {
+                            bm.runBrush("cube", event.getClickedBlock().getLocation(), BrushCommand.editSize.get(player), Material.STONE, player);
+                        }
+
+                    } else {
+                        messages.sendMessage("Please click on a block!");
                     }
-
-                } else {
-                    messages.sendMessage("Please click on a block!");
                 }
             }
         }
     }
-
 }

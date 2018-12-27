@@ -14,12 +14,10 @@ public class HeightMapManager {
     private int height;
     public HeightMapManager(String file) {
         BufferedImage image = null;
-        new File("plugins/BananaImageToMap/byte.bmp");
 
         try {
             image = ImageIO.read(new File(file));
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
