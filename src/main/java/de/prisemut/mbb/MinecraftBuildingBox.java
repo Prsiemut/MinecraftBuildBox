@@ -3,6 +3,7 @@ package de.prisemut.mbb;
 import de.prisemut.mbb.brush.BrushManager;
 import de.prisemut.mbb.brush.CubeBrush;
 import de.prisemut.mbb.brush.listener.BrushListener;
+import de.prisemut.mbb.brush.smooth.ErodeBrush;
 import de.prisemut.mbb.commands.*;
 import de.prisemut.mbb.interior.listener.InventoryListener;
 import org.bukkit.Bukkit;
@@ -32,12 +33,14 @@ public class MinecraftBuildingBox extends JavaPlugin {
          */
         Bukkit.getPluginManager().registerEvents(new InventoryListener(), this);
         Bukkit.getPluginManager().registerEvents(new BrushListener(), this);
+        Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
 
         /*
         Brushes
          */
         BrushManager brushManager = new BrushManager();
         brushManager.registerBrush(new CubeBrush(), "cube");
+        brushManager.registerBrush(new ErodeBrush(), "erode");
 
         /*
         Commands
@@ -50,7 +53,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         commandHandler.registerNewCommand("wlist", new wlist_command());
         commandHandler.registerNewCommand("mi", new mi_command());
         commandHandler.registerNewCommand("br", new BrushCommand());
-
+        commandHandler.registerNewCommand("fill", new fill_command());
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();

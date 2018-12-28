@@ -15,8 +15,9 @@ public class mi_command implements CommandInterface{
         }
     }
 
-    public String usage() {
-        return "<mi>";
+    public String usage()
+    {
+        return "mi";
     }
 
     public String info() {

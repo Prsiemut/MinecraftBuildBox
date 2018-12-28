@@ -7,6 +7,18 @@
     <groupId>MinecraftBuildingBox</groupId>
     <artifactId>MinecraftBuildingBox</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <repositories>
         <repository>
@@ -19,13 +31,20 @@
                 <enabled>true</enabled> <!-- snapshots enabled: we declare a SNAPSHOT repository because we need to download a SNAPSHOT dependency -->
             </snapshots>
         </repository>
+
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
+
         <repository>
             <id>fawe-repo</id>
             <url>http://ci.athion.net/job/FastAsyncWorldEdit/ws/mvn/</url>
+        </repository>
+
+        <repository>
+            <id>sponge</id>
+            <url>https://repo.spongepowered.org/maven</url>
         </repository>
     </repositories>
 
@@ -36,6 +55,7 @@
             <artifactId>worldedit-bukkit</artifactId>
             <version>6.1.1-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
@@ -48,10 +68,18 @@
             <version>1.12-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>com.boydti</groupId>
             <artifactId>fawe-api</artifactId>
             <version>latest</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spongepowered</groupId>
+            <artifactId>spongeapi</artifactId>
+            <version>7.1.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

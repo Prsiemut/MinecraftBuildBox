@@ -23,10 +23,18 @@ public class BrushCommand implements CommandInterface{
            if(player.getItemInHand().getType().equals(Material.BLAZE_ROD)) {
                edit.put(player, BrushTypes.CUBE_BRUSH);
                editSize.put(player, Integer.parseInt(args[2]));
-               messages.sendMessage("On your MasterTool the cube brush should now be bounded!");
+               messages.sendMessage("On your MasterTool the cube brush should now be equipd!");
            } else {
                messages.sendMessage("For brushes you just can use the BlazeRod as tool!");
            }
+        }else if(args[1].equals("erode") || args[1].equals("e")) {
+            if(player.getItemInHand().getType().equals(Material.BLAZE_ROD)) {
+                edit.put(player, BrushTypes.ERODE_BRUSH);
+                editSize.put(player, Integer.parseInt(args[2]));
+                messages.sendMessage("On your MasterTool the erdoe brush should now be equipd!");
+            } else {
+                messages.sendMessage("For brushes you just can use the BlazeRod as tool!");
+            }
         }
     }
 

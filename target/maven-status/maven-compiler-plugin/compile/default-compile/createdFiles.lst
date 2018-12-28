@@ -1,3 +1,4 @@
+de\prisemut\mbb\JoinListener.class
 de\prisemut\mbb\brush\CubeBrush.class
 de\prisemut\mbb\interior\InteriorInventory.class
 de\prisemut\mbb\brush\BrushTypes.class
@@ -22,9 +23,11 @@ de\prisemut\mbb\MinecraftBuildingBox.class
 de\prisemut\mbb\Messages.class
 de\prisemut\mbb\commands\mi_command.class
 de\prisemut\mbb\commands\wlist_command.class
+de\prisemut\mbb\brush\LineBrush.class
 de\prisemut\mbb\world\WorldManager.class
 de\prisemut\mbb\structure\KI_Translater.class
 de\prisemut\mbb\commands\BrushCommand.class
+de\prisemut\mbb\commands\fill_command.class
 de\prisemut\mbb\world\CoustomChunkGenerator\MFP_Generator.class
 de\prisemut\mbb\commands\wdelete_command.class
 de\prisemut\mbb\world\CoustomChunkGenerator\FlatBlockPopulator.class
