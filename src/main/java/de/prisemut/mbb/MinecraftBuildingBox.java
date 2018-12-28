@@ -2,12 +2,11 @@ package de.prisemut.mbb;
 
 import de.prisemut.mbb.brush.BrushManager;
 import de.prisemut.mbb.brush.CubeBrush;
+import de.prisemut.mbb.brush.CylinderBrush;
 import de.prisemut.mbb.brush.listener.BrushListener;
-import de.prisemut.mbb.brush.smooth.ErodeBrush;
 import de.prisemut.mbb.commands.*;
 import de.prisemut.mbb.interior.listener.InventoryListener;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -40,7 +39,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
          */
         BrushManager brushManager = new BrushManager();
         brushManager.registerBrush(new CubeBrush(), "cube");
-        brushManager.registerBrush(new ErodeBrush(), "erode");
+        brushManager.registerBrush(new CylinderBrush(), "cylinder");
 
         /*
         Commands

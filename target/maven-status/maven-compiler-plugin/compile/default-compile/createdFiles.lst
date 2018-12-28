@@ -23,7 +23,6 @@ de\prisemut\mbb\MinecraftBuildingBox.class
 de\prisemut\mbb\Messages.class
 de\prisemut\mbb\commands\mi_command.class
 de\prisemut\mbb\commands\wlist_command.class
-de\prisemut\mbb\brush\LineBrush.class
 de\prisemut\mbb\world\WorldManager.class
 de\prisemut\mbb\structure\KI_Translater.class
 de\prisemut\mbb\commands\BrushCommand.class

@@ -15,8 +15,8 @@ public class CubeBrush implements BrushInterface {
 
         if(size <= ConfigManager.getMaxBrushSize()) {
             if(size !=  0) {
-                Location point1 = spawnlocation.add(size, 0, -size);
-                Location point2 = spawnlocation.add(-size, size, size);
+                Location point1 = spawnlocation.add( 20, 0, 10);
+                Location point2 = point1.add(20, 5, 30);
                 Cuboid c = new Cuboid(point1, point2, player);
                 c.fillCube(pattern);
                 m.sendMessage("Successfully spawned "+ c.getBlocks().size() + " blocks!");
