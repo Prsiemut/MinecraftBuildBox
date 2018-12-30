@@ -1,6 +1,4 @@
 package de.prisemut.mbb.brush;
-
-import de.prisemut.mbb.ConfigManager;
 import de.prisemut.mbb.Messages;
 import de.prisemut.mbb.math.Cuboid;
 import org.bukkit.Location;
@@ -13,7 +11,6 @@ public class CubeBrush implements BrushInterface {
     public void build(Location spawnlocation, int size, Material pattern, Player player) {
         Messages m = new Messages(player);
 
-        if(size <= ConfigManager.getMaxBrushSize()) {
             if(size !=  0) {
                 Location point1 = spawnlocation.add( 20, 0, 10);
                 Location point2 = point1.add(20, 5, 30);
@@ -23,9 +20,7 @@ public class CubeBrush implements BrushInterface {
             }else{
                 m.sendMessage("Brush size can`t be 0!");
             }
-        }else{
-            m.sendMessage(ConfigManager.getMaxBrushSize() + " is the maximum size for brush!");
-        }
+
     }
 
     public String usage() {

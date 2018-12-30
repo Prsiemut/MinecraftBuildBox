@@ -37,7 +37,6 @@ public class MinecraftBuildingBox extends JavaPlugin {
         /*
         Config
          */
-        ConfigManager.setupConfig();
 
         /*
         Listener
