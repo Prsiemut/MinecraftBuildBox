@@ -27,7 +27,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         System.out.println("[MBB] Loading...");
 
         //Check if File exists -> enable the TCP Client
-        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "TCP.Client");
+        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/TCP.Client");
         if(f.exists()){
             System.out.println("Enabling TCP Client...");
             TCPClient tcpClient = new TCPClient();
