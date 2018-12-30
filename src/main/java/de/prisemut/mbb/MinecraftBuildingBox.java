@@ -1,5 +1,6 @@
 package de.prisemut.mbb;
 
+import de.prisemut.mbb.brush.BallBrush;
 import de.prisemut.mbb.brush.BrushManager;
 import de.prisemut.mbb.brush.CubeBrush;
 import de.prisemut.mbb.brush.CylinderBrush;
@@ -51,6 +52,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         BrushManager brushManager = new BrushManager();
         brushManager.registerBrush(new CubeBrush(), "cube");
         brushManager.registerBrush(new CylinderBrush(), "cylinder");
+        brushManager.registerBrush(new BallBrush(), "ball");
 
         /*
         Commands
