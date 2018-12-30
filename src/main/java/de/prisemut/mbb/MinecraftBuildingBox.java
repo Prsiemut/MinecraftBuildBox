@@ -7,6 +7,7 @@ import de.prisemut.mbb.brush.listener.BrushListener;
 import de.prisemut.mbb.commands.*;
 import de.prisemut.mbb.interior.listener.InventoryListener;
 import de.prisemut.mbb.server.tcp.*;
+import net.royawesome.jlibnoise.module.combiner.Min;
 import org.bukkit.Bukkit;
 import java.io.File;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -25,7 +26,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         System.out.println("[MBB] Loading...");
 
         //Check if File exists -> enable the TCP Client
-        File f = new File("TCP.Client");
+        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "TCP.Client");
         if(f.exists()){
             System.out.println("Enabling TCP Client...");
             TCPClient tcpClient = new TCPClient();
