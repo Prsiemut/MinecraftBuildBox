@@ -27,6 +27,7 @@ public class BrushCommand implements CommandInterface{
            } else {
                messages.sendMessage("For brushes you just can use the BlazeRod as tool!");
            }
+
         }else if(args[1].equals("erode") || args[1].equals("e")) {
             if(player.getItemInHand().getType().equals(Material.BLAZE_ROD)) {
                 edit.put(player, BrushTypes.ERODE_BRUSH);

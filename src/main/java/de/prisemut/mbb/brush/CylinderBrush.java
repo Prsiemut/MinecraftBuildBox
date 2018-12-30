@@ -29,6 +29,6 @@ public class CylinderBrush implements BrushInterface{
 
     @Override
     public String usage() {
-        return null;
+        return "-";
     }
 }

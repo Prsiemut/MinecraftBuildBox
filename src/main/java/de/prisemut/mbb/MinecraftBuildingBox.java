@@ -46,13 +46,10 @@ public class MinecraftBuildingBox extends JavaPlugin {
          */
         getCommand("mbb").setExecutor(new CommandHandler());
         CommandHandler commandHandler = new CommandHandler();
-        commandHandler.registerNewCommand("wcreate", new wcreate_command());
-        commandHandler.registerNewCommand("wdelete", new wdelete_command());
-        commandHandler.registerNewCommand("wtp", new wtp_command());
-        commandHandler.registerNewCommand("wlist", new wlist_command());
         commandHandler.registerNewCommand("mi", new mi_command());
         commandHandler.registerNewCommand("br", new BrushCommand());
         commandHandler.registerNewCommand("fill", new fill_command());
+        commandHandler.registerNewCommand("world", new world_Command());
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();
