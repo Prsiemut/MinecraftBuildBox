@@ -28,11 +28,11 @@ public class BrushCommand implements CommandInterface{
                messages.sendMessage("For brushes you just can use the BlazeRod as tool!");
            }
 
-        }else if(args[1].equals("erode") || args[1].equals("e")) {
+        }else if(args[1].equals("ball") || args[1].equals("b")) {
             if(player.getItemInHand().getType().equals(Material.BLAZE_ROD)) {
-                edit.put(player, BrushTypes.ERODE_BRUSH);
+                edit.put(player, BrushTypes.BALL_BRUSH);
                 editSize.put(player, Integer.parseInt(args[2]));
-                messages.sendMessage("On your MasterTool the erdoe brush should now be equipd!");
+                messages.sendMessage("On your MasterTool the ball brush should now be equipd!");
             } else {
                 messages.sendMessage("For brushes you just can use the BlazeRod as tool!");
             }

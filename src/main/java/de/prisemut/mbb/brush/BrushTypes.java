@@ -4,7 +4,7 @@ import de.prisemut.mbb.commands.BrushCommand;
 
 public enum BrushTypes {
 
-    CUBE_BRUSH, LINE_BRUSH, CUBE, ERODE_BRUSH;
+    CUBE_BRUSH, LINE_BRUSH, CUBE, BALL_BRUSH;
 
     public static BrushTypes getBrushByName(String brushname) {
         if ("cube".equals(brushname)) {

@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e41b589b-4add-4ffd-8e10-c6b526720bf1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BlendBallBrush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/listener/BrushListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/listener/BrushListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/BrushCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/BrushCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,22 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="world_Command.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/world_Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="808">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4307#4308#0" expanded="true" />
-                <element signature="e#4381#4382#0" expanded="true" />
-                <element signature="e#4423#4424#0" expanded="true" />
-                <element signature="e#4466#4467#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mi_command.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/mi_command.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,8 +41,8 @@
       <file leaf-file-name="BrushCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/BrushCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="578">
+              <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +53,55 @@
       <file leaf-file-name="MinecraftBuildingBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
+            <state relative-caret-position="281">
+              <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrushListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/listener/BrushListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrushTypes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushTypes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrushManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#731#732#0" expanded="true" />
+                <element signature="e#773#774#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrushInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -104,59 +132,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BallBrush.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BallBrush.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state relative-caret-position="442">
+              <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#335#336#0" expanded="true" />
                 <element signature="e#362#363#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlendBallBrush.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BlendBallBrush.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="82" column="85" selection-start-line="82" selection-start-column="85" selection-end-line="82" selection-end-column="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockBuffer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockBuffer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-603">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
-                <element signature="e#865#866#0" expanded="true" />
-                <element signature="e#897#898#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#961#962#0" expanded="true" />
-                <element signature="e#993#994#0" expanded="true" />
-                <element signature="e#2771#2772#0" expanded="true" />
-                <element signature="e#2804#2805#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,28 +199,28 @@
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/JoinListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/fill_command.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/LineBrush.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushTypes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/listener/BrushListener.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/smooth/ErodeBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/CubeBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/server/tcp/TCPClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/BrushCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/CylinderBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/world/WorldManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/world_Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockBuffer.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockHelp.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BlendBallBrush.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushTypes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/listener/BrushListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/BrushCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1683" />
-    <option name="y" value="-8" />
+    <option name="x" value="-2085" />
+    <option name="y" value="-23" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -563,11 +547,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19128586" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19128586" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947916" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947916" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -591,13 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
           <caret line="38" column="56" lean-forward="true" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -757,23 +734,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/LineBrush.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BlockHelper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/smooth/ErodeBrush.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/listener/BrushListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="43" column="145" selection-start-line="43" selection-start-column="145" selection-end-line="43" selection-end-column="145" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -837,18 +797,6 @@
         <state relative-caret-position="-357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/world/WorldManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -894,16 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/world_Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="808">
@@ -932,16 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/BrushCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/CubeBrush.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -960,18 +888,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#896#897#0" expanded="true" />
             <element signature="e#923#924#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,10 +922,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BlendBallBrush.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="82" column="85" selection-start-line="82" selection-start-column="85" selection-end-line="82" selection-end-column="85" />
+        <state relative-caret-position="1369">
+          <caret line="82" column="101" selection-start-line="82" selection-start-column="101" selection-end-line="82" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/BrushCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BrushTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/listener/BrushListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
           </folding>
         </state>
       </provider>

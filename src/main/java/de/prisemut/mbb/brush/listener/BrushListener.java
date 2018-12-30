@@ -40,8 +40,8 @@ public class BrushListener implements Listener {
                         } else  if(BrushCommand.edit.get(player).equals(BrushTypes.CUBE)) {
                             pos2.put(player, event.getClickedBlock().getLocation());
                             messages.sendMessage("Position 2 set!");
-                        } else if(BrushCommand.edit.get(player).equals(BrushTypes.ERODE_BRUSH)) {
-                            bm.runBrush("erode", event.getClickedBlock().getLocation(), BrushCommand.editSize.get(player), Material.STONE, player);
+                        } else if(BrushCommand.edit.get(player).equals(BrushTypes.BALL_BRUSH)) {
+                            bm.runBrush("ball", event.getClickedBlock().getLocation(), BrushCommand.editSize.get(player), Material.STONE, player);
                         }
                     } else {
                         messages.sendMessage("Please click on a block!");
