@@ -17,7 +17,7 @@ public class CubeBrush implements BrushInterface {
                 Cuboid c = new Cuboid(point1, point2, player);
                 c.fillCube(pattern);
                 m.sendMessage("Successfully spawned "+ c.getBlocks().size() + " blocks!");
-            }else{
+            } else {
                 m.sendMessage("Brush size can`t be 0!");
             }
 
