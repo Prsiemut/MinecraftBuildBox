@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e41b589b-4add-4ffd-8e10-c6b526720bf1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/LineBrush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/MultiLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,24 +69,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShipManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShipManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="526">
+              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
               <folding>
-                <element signature="e#141#142#0" expanded="true" />
-                <element signature="e#178#179#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OldShip_Generator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OldShip_Generator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="747">
+              <caret line="182" column="125" selection-start-line="182" selection-start-column="125" selection-end-line="182" selection-end-column="125" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,15 +204,15 @@
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BoxTool.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/LineBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipTypes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/shape/OldShipShape.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-382" />
-    <option name="y" value="-10" />
+    <option name="x" value="89" />
+    <option name="y" value="48" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -1041,21 +1035,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="747">
+          <caret line="182" column="125" selection-start-line="182" selection-start-column="125" selection-end-line="182" selection-end-column="125" />
           <folding>
-            <element signature="e#141#142#0" expanded="true" />
-            <element signature="e#178#179#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+        <state relative-caret-position="526">
+          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
