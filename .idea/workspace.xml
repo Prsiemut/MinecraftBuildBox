@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e41b589b-4add-4ffd-8e10-c6b526720bf1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/ship_command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,23 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="world_Command.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/world_Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mi_command.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/mi_command.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#518#519#0" expanded="true" />
@@ -69,11 +60,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShipManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShipManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="323">
+              <caret line="19" column="73" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ship_command.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/ship_command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#581#582#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinecraftBuildingBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,10 +102,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="buildServer_command.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/buildServer_command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="OldShip_Generator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
+            <state relative-caret-position="3094">
               <caret line="182" column="125" selection-start-line="182" selection-start-column="125" selection-end-line="182" selection-end-column="125" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -97,43 +127,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipTypes.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchematicManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/interior/SchematicManager.java">
+      <file leaf-file-name="TCPClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/server/tcp/TCPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" column="81" lean-forward="true" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoxPattern.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BoxPattern.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoxPerformer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BoxPerformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-885">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -156,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/interior/listener/InventoryListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/math/Line.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/Edits.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/SessionManager.java" />
@@ -195,7 +197,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/BallBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/Tool.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/ConfigManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/CubeBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BoxPattern.java" />
@@ -205,14 +206,16 @@
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/LineBrush.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipTypes.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/shape/OldShipShape.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/ship_command.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="89" />
-    <option name="y" value="48" />
+    <option name="x" value="-134" />
+    <option name="y" value="-15" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -539,7 +542,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -550,11 +553,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19128586" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19128586" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947916" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947916" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -574,20 +577,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MasterTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/wcreate_command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-357" />
@@ -838,16 +827,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/brush/LineBrush.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -864,13 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/server/tcp/TCPClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -966,7 +938,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/BoxPerformer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -986,7 +958,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/mi_command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#518#519#0" expanded="true" />
@@ -1019,7 +991,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipTypes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -1035,9 +1007,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/server/tcp/TCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-885">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/buildServer_command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/OldShip_Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
+        <state relative-caret-position="3094">
           <caret line="182" column="125" selection-start-line="182" selection-start-column="125" selection-end-line="182" selection-end-column="125" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1047,10 +1043,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/shiptool/ShipManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="323">
+          <caret line="19" column="73" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/commands/ship_command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
           </folding>
         </state>
       </provider>

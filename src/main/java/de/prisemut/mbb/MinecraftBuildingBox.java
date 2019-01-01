@@ -63,6 +63,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         commandHandler.registerNewCommand("fill", new fill_command());
         commandHandler.registerNewCommand("world", new world_Command());
         commandHandler.registerNewCommand("BS", new buildServer_command());
+        commandHandler.registerNewCommand("ship", new ship_command());
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();
