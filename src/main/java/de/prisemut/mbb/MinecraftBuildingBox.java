@@ -19,7 +19,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
 
     private static MinecraftBuildingBox instance;
     public static String prefix = "§8[§bMBB§8] §7";
-
+    TCPClient tcpClient = new TCPClient();
     @Override
     public void onEnable() {
         super.onEnable();
@@ -30,8 +30,8 @@ public class MinecraftBuildingBox extends JavaPlugin {
         File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/TCP.Client");
         if(f.exists()){
             System.out.println("Enabling TCP Client...");
-            TCPClient tcpClient = new TCPClient();
-            tcpClient.run();
+
+            tcpClient.Connect();
         }
 
         /*
@@ -62,6 +62,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         commandHandler.registerNewCommand("br", new BrushCommand());
         commandHandler.registerNewCommand("fill", new fill_command());
         commandHandler.registerNewCommand("world", new world_Command());
+        commandHandler.registerNewCommand("BS", new buildServer_command());
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();
@@ -74,6 +75,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        tcpClient.close();
         super.onDisable();
         System.out.println("[MBB] Disabling...");
     }

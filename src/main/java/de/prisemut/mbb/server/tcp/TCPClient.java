@@ -1,5 +1,7 @@
 package de.prisemut.mbb.server.tcp;
 
+import de.prisemut.mbb.*;
+
 import java.io.*;
 import java.net.Socket;
 import java.net.*;
@@ -18,6 +20,8 @@ public class TCPClient {
     public void close(){
 
         closing = true;
+        runThread.stop();
+        runThread.interrupt();
     }
 
     public void send(String msg){
@@ -30,7 +34,7 @@ public class TCPClient {
             msgToServer.flush();
         }
         catch (Exception ex){
-System.out.println("Error on sending Message to Server");
+            System.out.println("Error on sending Message to Server");
         }
     }
 
@@ -40,6 +44,7 @@ System.out.println("Error on sending Message to Server");
             System.out.println("Connecting to Server... ");
             socket = new Socket(host, serverPort);
             System.out.println("Successfully connected to Server");
+            runThread.start();
         }
         catch (Exception ex){
 
@@ -47,35 +52,49 @@ System.out.println("Error on sending Message to Server");
         }
     }
 
-    public void run(){
+    private boolean enabled(){
+        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/TCP.Client");
+        if(!f.exists()){
+            System.out.println("Disable TCP Client...");
+                 closing = true;
+return false;
+                   }
+        else{
+            return true;
+        }
+    }
 
-        try{
-             msgFromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    Thread runThread = new Thread(){
+    public void run() {
 
 
-            while (!closing) {
+        try {
+            msgFromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+
+            while (closing == true|| !isInterrupted() || enabled() == true) {
                 String line = msgFromServer.readLine();
-                if(line != null && line.length() >0){
-                    if(handler !=null) handler.onMessage(line);
+                if (line != null && line.length() > 0) {
+                    if (handler != null) handler.onMessage(line);
                 }
             }
-           // msgToServer.println("[0xGERND]");
-           // String line = msgFromServer.readLine();
-           // System.out.println("Client Received: " + line + " from " + host);
+            // msgToServer.println("[0xGERND]");
+            // String line = msgFromServer.readLine();
+            // System.out.println("Client Received: " + line + " from " + host);
             msgToServer.close();
             msgFromServer.close();
             socket.close();
-        }
-        catch(UnknownHostException ex) {
+        } catch (
+                UnknownHostException ex) {
             ex.printStackTrace();
-        }
-        catch(IOException e){
+        } catch (
+                IOException e) {
             e.printStackTrace();
-        }
-
-        catch (Exception ex) {
+        } catch (
+                Exception ex) {
             ex.printStackTrace();
         }
-    }
+      }
+    };
 
 }
