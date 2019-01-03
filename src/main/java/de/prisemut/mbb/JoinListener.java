@@ -14,8 +14,7 @@ public class JoinListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        
+
         BrushCommand.edit.put(player, BrushTypes.CUBE);
     }
-
 }
