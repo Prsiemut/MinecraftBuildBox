@@ -17,7 +17,7 @@ public class ship_command implements CommandInterface{
         //mbb ship [old | modern]
         if(args.length == 2) {
             if(args[1].equals("old")) {
-                ShipManager shipManager = new ShipManager(player.getLocation().add(0, 5, 0));
+                ShipManager shipManager = new ShipManager(player.getLocation());
                 shipManager.buildShip(player.getWorld());
                 messages.sendMessage("Created ship!");
             } else if (args[1].equals("modern")) {
