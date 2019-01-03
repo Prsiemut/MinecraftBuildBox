@@ -1,7 +1,21 @@
+#Hey!
+#DiscordServer: https://discord.gg/UqTas3K
+#WebSite:
+#Mainly the plugin was developed by Prisemut | Tristan
+#Software and TCP stuff made by Xaradon
+#
+#Twitter of Prisemut: https://twitter.com/PrisemutTristan
+#Twitter of Xaradon: https://twitter.com/Aropol_Xaradon
+#
+
 main:
-  #Interior requires WorldEdit!
-  enable-interior: true
+  #Main prefix
+  prefix: "§7[§bMBB§7] "
+
 brush:
  #We recommend 5!
   maxSize: 5
 
+building-box:
+  #License
+  license: null

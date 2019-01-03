@@ -18,8 +18,9 @@ import java.io.File;
 public class MinecraftBuildingBox extends JavaPlugin {
 
     private static MinecraftBuildingBox instance;
-    public static String prefix = "§8[§bMBB§8] §7";
+    public static String prefix = "§7[§bMBB§7] ";
     TCPClient tcpClient = new TCPClient();
+
     @Override
     public void onEnable() {
         super.onEnable();
@@ -37,6 +38,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         /*
         Config
          */
+        Config.setup();
 
         /*
         Listener
@@ -63,13 +65,11 @@ public class MinecraftBuildingBox extends JavaPlugin {
         commandHandler.registerNewCommand("fill", new fill_command());
         commandHandler.registerNewCommand("world", new world_Command());
         commandHandler.registerNewCommand("BS", new buildServer_command());
-        commandHandler.registerNewCommand("ship", new ship_command());
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();
         File file2 = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/hmaps/");
         file2.mkdirs();
-
 
 
     }

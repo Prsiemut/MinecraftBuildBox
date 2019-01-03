@@ -6,7 +6,7 @@ import org.bukkit.*;
 
 public class Messages {
 
-    private String prefix = "§8[§bMBB§8] §7";
+    public static String prefix = "§7[§bMBB§7] ";
     private Player player;
 
     public Messages(Player player) {

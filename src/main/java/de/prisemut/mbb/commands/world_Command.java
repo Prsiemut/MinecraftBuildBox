@@ -1,6 +1,7 @@
 package de.prisemut.mbb.commands;
 
 import de.prisemut.mbb.Messages;
+import de.prisemut.mbb.debug.DebugManager;
 import de.prisemut.mbb.world.WorldManager;
 import de.prisemut.mbb.world.WorldTypes;
 import org.bukkit.Bukkit;
@@ -25,34 +26,50 @@ public class world_Command implements CommandInterface {
                 WorldManager worldManager;
                 if(args[3].equals("mf")) {
                     if(args.length == 4) {
-                        worldManager = new WorldManager(worldname, WorldTypes.MF);
-                        worldManager.createWorld();
-                        messages.sendMessage("Created world " + args[2] + " successfully!");
+                        try {
+                            worldManager = new WorldManager(worldname, WorldTypes.MF);
+                            worldManager.createWorld();
+                            messages.sendMessage("Created world " + args[2] + " successfully!");
+                        } catch (Exception e) {
+                            DebugManager.debug(player, "Error while creating world: "+e.getMessage());
+                        }
                     } else {
                         messages.sendMessage("Please just use </mbb world create> [NAME] <mf>!");
                     }
                 } else if (args[3].equals("mf+")) {
                     if(args.length == 4) {
+                        try {
                         worldManager = new WorldManager(worldname, WorldTypes.MFP);
                         worldManager.createWorld();
                         messages.sendMessage("Created world " + args[2] + " successfully!");
+                        } catch (Exception e) {
+                            DebugManager.debug(player, "Error while creating world: "+e.getMessage());
+                        }
                     } else {
                         messages.sendMessage("Please just use </mbb world create> [NAME] <mf+>!");
                     }
                 } else if (args[3].equals("flat")) {
                     if(args.length == 4) {
+                        try {
                         worldManager = new WorldManager(worldname, WorldTypes.FLAT);
                         worldManager.createWorld();
                         messages.sendMessage("Created world " + args[2] + " successfully!");
+                        } catch (Exception e) {
+                            DebugManager.debug(player, "Error while creating world: "+e.getMessage());
+                        }
                     } else {
                       messages.sendMessage("Plese just use </mbb world create> [NAME] <flat>!");
                     }
                 } else if (args[3].equals("cwc")) {
                     if(args.length == 6) {
                         //mbb world create [Name] [cwc] [l1] [l2]
+                        try {
                         worldManager = new WorldManager(worldname, Integer.parseInt(args[3]), Integer.parseInt(args[4]));
                         worldManager.createCoustomWorld();
                         messages.sendMessage("Created world " + args[2] + " successfully!");
+                        } catch (Exception e) {
+                            DebugManager.debug(player, "Error while creating world: "+e.getMessage());
+                        }
                     }else{
                         messages.sendMessage("Please just use </mbb world create> [NAME] <cwc> [LayerID 1] [LayerID 2]!");
                     }
@@ -87,6 +104,7 @@ public class world_Command implements CommandInterface {
                     messages.sendMessage("Teleported to world " + args[2]);
                 }catch (Exception e) {
                     messages.sendMessage("Can`t find this world!");
+                    DebugManager.debug(player, "Error while teleporting you to your world ["+args[2]+"] maybe the world doesn`t exist.");
                 }
             } else {
                 messages.sendMessage("Please just use </mbb world tp/tele/teleport> [NAME]");

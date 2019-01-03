@@ -1,5 +1,6 @@
 package de.prisemut.mbb.brush;
 
+import de.prisemut.mbb.debug.DebugManager;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.libs.it.unimi.dsi.fastutil.Hash;
@@ -26,6 +27,10 @@ public class BrushManager {
     }
 
     public void runBrush(String brush, Location location, int size, Material material, Player player) {
-        getExecutor(brush).build(location, size, material, player);
+        try {
+            getExecutor(brush).build(location, size, material, player);
+        } catch (Exception e) {
+            DebugManager.debug(player, "Error while runnig brush: "+e.getMessage());
+        }
     }
 }
