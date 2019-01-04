@@ -26,7 +26,6 @@ de\prisemut\mbb\BoxPattern.class
 de\prisemut\mbb\shiptool\jnbt\IntTag.class
 de\prisemut\mbb\shiptool\jnbt\NBTOutputStream.class
 de\prisemut\mbb\world\CoustomChunkGenerator\FlatBlockPopulator.class
-de\prisemut\mbb\shiptool\jnbt\ListTagBuilder.class
 de\prisemut\mbb\JoinListener.class
 de\prisemut\mbb\brush\CubeBrush.class
 de\prisemut\mbb\shiptool\jnbt\NBTUtils.class
@@ -34,17 +33,14 @@ de\prisemut\mbb\shiptool\ShipManager$1.class
 de\prisemut\mbb\BoxPerformer.class
 de\prisemut\mbb\brush\BrushTypes.class
 de\prisemut\mbb\server\tcp\ConsoleColors.class
-de\prisemut\mbb\shiptool\jnbt\NamedTag.class
 de\prisemut\mbb\world\WorldTypes.class
 de\prisemut\mbb\shiptool\jnbt\NBTConstants.class
 de\prisemut\mbb\world\CoustomChunkGenerator\heightmap\HeightMapManager.class
 de\prisemut\mbb\world\CoustomChunkGenerator\MF_Generator.class
 de\prisemut\mbb\BoxBlock.class
 de\prisemut\mbb\world\CoustomChunkGenerator\Coustom_Generator.class
-de\prisemut\mbb\shiptool\jnbt\IntArrayTag.class
 de\prisemut\mbb\debug\DebugManager.class
 de\prisemut\mbb\server\tcp\TCPMessageHandler.class
-de\prisemut\mbb\shiptool\jnbt\CompoundTagBuilder.class
 de\prisemut\mbb\Config.class
 de\prisemut\mbb\brush\listener\BrushListener.class
 de\prisemut\mbb\math\Cuboid$BlackIterator.class
@@ -59,7 +55,6 @@ de\prisemut\mbb\commands\CommandInterface.class
 de\prisemut\mbb\commands\mi_command.class
 de\prisemut\mbb\commands\world_Command.class
 de\prisemut\mbb\brush\LineBrush.class
-de\prisemut\mbb\shiptool\jnbt\LongArrayTag.class
 de\prisemut\mbb\world\WorldManager.class
 de\prisemut\mbb\structure\KI_Translater.class
 de\prisemut\mbb\commands\fill_command.class

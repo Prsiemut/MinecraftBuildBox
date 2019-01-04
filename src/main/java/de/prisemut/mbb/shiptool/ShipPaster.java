@@ -21,7 +21,7 @@ public class ShipPaster {
 
     public static void pasteSchematic(World world, Location loc, Schematic schematic)
     {
-        byte[] blocks = schematic.getBlocks();
+        short[] blocks = schematic.getBlocks();
         byte[] blockData = schematic.getData();
 
         short length = schematic.getLenght();
@@ -39,13 +39,10 @@ public class ShipPaster {
         }
     }
 
-    public static Schematic loadSchematic(String name) throws IOException
+    public static Schematic loadSchematic(File file) throws IOException
     {
-
-        File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/ships/");
-
         FileInputStream stream = new FileInputStream(file);
-        NBTInputStream nbtStream = new NBTInputStream(new GZIPInputStream(stream));
+        NBTInputStream nbtStream = new NBTInputStream(stream);
 
         CompoundTag schematicTag = (CompoundTag) nbtStream.readTag();
         if (!schematicTag.getName().equals("Schematic")) {
@@ -61,13 +58,32 @@ public class ShipPaster {
         short length = getChildTag(schematic, "Length", ShortTag.class).getValue();
         short height = getChildTag(schematic, "Height", ShortTag.class).getValue();
 
-        String materials = getChildTag(schematic, "Materials", StringTag.class).getValue();
-        if (!materials.equals("Alpha")) {
-            throw new IllegalArgumentException("Schematic file is not an Alpha schematic");
+
+        // Get blocks
+        byte[] blockId = getChildTag(schematic, "Blocks", ByteArrayTag.class).getValue();
+        byte[] blockData = getChildTag(schematic, "Data", ByteArrayTag.class).getValue();
+        byte[] addId = new byte[0];
+        short[] blocks = new short[blockId.length]; // Have to later combine IDs
+
+        // We support 4096 block IDs using the same method as vanilla Minecraft, where
+        // the highest 4 bits are stored in a separate byte array.
+        if (schematic.containsKey("AddBlocks")) {
+            addId = getChildTag(schematic, "AddBlocks", ByteArrayTag.class).getValue();
         }
 
-        byte[] blocks = getChildTag(schematic, "Blocks", ByteArrayTag.class).getValue();
-        byte[] blockData = getChildTag(schematic, "Data", ByteArrayTag.class).getValue();
+        // Combine the AddBlocks data with the first 8-bit block ID
+        for (int index = 0; index < blockId.length; index++) {
+            if ((index >> 1) >= addId.length) { // No corresponding AddBlocks index
+                blocks[index] = (short) (blockId[index] & 0xFF);
+            } else {
+                if ((index & 1) == 0) {
+                    blocks[index] = (short) (((addId[index >> 1] & 0x0F) << 8) + (blockId[index] & 0xFF));
+                } else {
+                    blocks[index] = (short) (((addId[index >> 1] & 0xF0) << 4) + (blockId[index] & 0xFF));
+                }
+            }
+        }
+
         return new Schematic(blocks, blockData, width, length, height);
     }
 
