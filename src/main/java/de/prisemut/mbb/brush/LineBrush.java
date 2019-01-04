@@ -34,6 +34,6 @@ public class LineBrush implements BrushInterface{
 
     @Override
     public String usage() {
-        return null;
+        return "-";
     }
 }

@@ -1,34 +1,71 @@
-/*
- * WorldEdit, a Minecraft world manipulation toolkit
- * Copyright (C) sk89q <http://www.sk89q.com>
- * Copyright (C) WorldEdit team and contributors
- *
- * This program is free software: you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by the
- * Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
- * for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+/*    */ package de.prisemut.mbb.shiptool.jnbt;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ public abstract class Tag
+/*    */ {
+/*    */   private final String name;
+/*    */   
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   public Tag(String name)
+/*    */   {
+/* 53 */     this.name = name;
+/*    */   }
+/*    */   
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   public final String getName()
+/*    */   {
+/* 61 */     return this.name;
+/*    */   }
+/*    */   
+/*    */   public abstract Object getValue();
+/*    */ }
+
+
+/* Location:              C:\Users\trihebi\Desktop\jnbt-1.1.jar!\org\jnbt\Tag.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       0.7.1
  */
-
-package de.prisemut.mbb.shiptool.jnbt;
-
-/**
- * Represents a NBT tag.
- */
-public abstract class Tag {
-
-    /**
-     * Gets the value of this tag.
-     * 
-     * @return the value
-     */
-    public abstract Object getValue();
-
-}

@@ -1,49 +1,78 @@
-/*
- * WorldEdit, a Minecraft world manipulation toolkit
- * Copyright (C) sk89q <http://www.sk89q.com>
- * Copyright (C) WorldEdit team and contributors
- *
- * This program is free software: you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by the
- * Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
- * for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+/*    */ package de.prisemut.mbb.shiptool.jnbt;
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ public final class IntTag
+/*    */   extends Tag
+/*    */ {
+/*    */   private final int value;
+/*    */   
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */ 
+/*    */   public IntTag(String name, int value)
+/*    */   {
+/* 54 */     super(name);
+/* 55 */     this.value = value;
+/*    */   }
+/*    */   
+/*    */   public Integer getValue()
+/*    */   {
+/* 60 */     return Integer.valueOf(this.value);
+/*    */   }
+/*    */   
+/*    */   public String toString()
+/*    */   {
+/* 65 */     String name = getName();
+/* 66 */     String append = "";
+/* 67 */     if ((name != null) && (!name.equals(""))) {
+/* 68 */       append = "(\"" + getName() + "\")";
+/*    */     }
+/* 70 */     return "TAG_Int" + append + ": " + this.value;
+/*    */   }
+/*    */ }
+
+
+/* Location:              C:\Users\trihebi\Desktop\jnbt-1.1.jar!\org\jnbt\IntTag.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       0.7.1
  */
-
-package de.prisemut.mbb.shiptool.jnbt;
-
-/**
- * The {@code TAG_Int} tag.
- */
-public final class IntTag extends Tag {
-
-    private final int value;
-
-    /**
-     * Creates the tag with an empty name.
-     *
-     * @param value the value of the tag
-     */
-    public IntTag(int value) {
-        super();
-        this.value = value;
-    }
-
-    @Override
-    public Integer getValue() {
-        return value;
-    }
-
-    @Override
-    public String toString() {
-        return "TAG_Int(" + value + ")";
-    }
-
-}

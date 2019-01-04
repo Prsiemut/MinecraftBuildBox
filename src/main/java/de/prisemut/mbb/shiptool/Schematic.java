@@ -2,26 +2,25 @@ package de.prisemut.mbb.shiptool;
 
 public class Schematic {
 
-    private short[] blocks;
+    private byte[] blocks;
     private byte[] data;
-    private String name;
     private short width;
-    private short length;
+    private short lenght;
     private short height;
 
-    public Schematic(String name, short[] blocks, byte[] data, short width, short length, short height) {
-        this.name = name;
+    public Schematic(byte[] blocks, byte[] data, short width, short lenght, short height)
+    {
         this.blocks = blocks;
         this.data = data;
         this.width = width;
-        this.length = length;
+        this.lenght = lenght;
         this.height = height;
     }
 
     /**
      * @return the blocks
      */
-    public short[] getBlocks()
+    public byte[] getBlocks()
     {
         return blocks;
     }
@@ -47,7 +46,7 @@ public class Schematic {
      */
     public short getLenght()
     {
-        return length;
+        return lenght;
     }
 
     /**

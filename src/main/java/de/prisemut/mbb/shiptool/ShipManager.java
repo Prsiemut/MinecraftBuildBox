@@ -3,6 +3,8 @@ package de.prisemut.mbb.shiptool;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
+import java.io.IOException;
+
 public class ShipManager {
 
     private ShipTypes types;
@@ -18,13 +20,25 @@ public class ShipManager {
     public void createShip() {
         switch (types) {
             case OLD_PIRAT:
-                ShipPaster.pasteSchematic(player.getWorld(), location, ShipPaster.loadSchematic("oldp.schematic"));
+                try {
+                    ShipPaster.pasteSchematic(player.getWorld(), location, ShipPaster.loadSchematic("oldp.schematic"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             case OLD:
-                ShipPaster.pasteSchematic(player.getWorld(), location, ShipPaster.loadSchematic("old.schematic"));
+                try {
+                    ShipPaster.pasteSchematic(player.getWorld(), location, ShipPaster.loadSchematic("old.schematic"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             case MODERN_WARSHIP:
-                ShipPaster.pasteSchematic(player.getWorld(), location, ShipPaster.loadSchematic("modernw.schematic"));
+                try {
+                    ShipPaster.pasteSchematic(player.getWorld(), location, ShipPaster.loadSchematic("modernw.schematic"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             default:
                 break;

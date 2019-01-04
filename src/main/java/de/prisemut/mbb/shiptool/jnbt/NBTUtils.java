@@ -1,195 +1,149 @@
-/*
- * WorldEdit, a Minecraft world manipulation toolkit
- * Copyright (C) sk89q <http://www.sk89q.com>
- * Copyright (C) WorldEdit team and contributors
- *
- * This program is free software: you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by the
- * Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
- * FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License
- * for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+/*    */ package de.prisemut.mbb.shiptool.jnbt;
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ public final class NBTUtils
+/*     */ {
+/*     */   public static String getTypeName(Class<? extends Tag> clazz)
+/*     */   {
+/*  49 */     if (clazz.equals(ByteArrayTag.class))
+/*  50 */       return "TAG_Byte_Array";
+/*  51 */     if (clazz.equals(ByteTag.class))
+/*  52 */       return "TAG_Byte";
+/*  53 */     if (clazz.equals(CompoundTag.class))
+/*  54 */       return "TAG_Compound";
+/*  55 */     if (clazz.equals(DoubleTag.class))
+/*  56 */       return "TAG_Double";
+/*  57 */     if (clazz.equals(EndTag.class))
+/*  58 */       return "TAG_End";
+/*  59 */     if (clazz.equals(FloatTag.class))
+/*  60 */       return "TAG_Float";
+/*  61 */     if (clazz.equals(IntTag.class))
+/*  62 */       return "TAG_Int";
+/*  63 */     if (clazz.equals(ListTag.class))
+/*  64 */       return "TAG_List";
+/*  65 */     if (clazz.equals(LongTag.class))
+/*  66 */       return "TAG_Long";
+/*  67 */     if (clazz.equals(ShortTag.class))
+/*  68 */       return "TAG_Short";
+/*  69 */     if (clazz.equals(StringTag.class)) {
+/*  70 */       return "TAG_String";
+/*     */     }
+/*  72 */     throw new IllegalArgumentException("Invalid tag classs (" + clazz.getName() + ").");
+/*     */   }
+/*     */   
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */   public static int getTypeCode(Class<? extends Tag> clazz)
+/*     */   {
+/*  83 */     if (clazz.equals(ByteArrayTag.class))
+/*  84 */       return 7;
+/*  85 */     if (clazz.equals(ByteTag.class))
+/*  86 */       return 1;
+/*  87 */     if (clazz.equals(CompoundTag.class))
+/*  88 */       return 10;
+/*  89 */     if (clazz.equals(DoubleTag.class))
+/*  90 */       return 6;
+/*  91 */     if (clazz.equals(EndTag.class))
+/*  92 */       return 0;
+/*  93 */     if (clazz.equals(FloatTag.class))
+/*  94 */       return 5;
+/*  95 */     if (clazz.equals(IntTag.class))
+/*  96 */       return 3;
+/*  97 */     if (clazz.equals(ListTag.class))
+/*  98 */       return 9;
+/*  99 */     if (clazz.equals(LongTag.class))
+/* 100 */       return 4;
+/* 101 */     if (clazz.equals(ShortTag.class))
+/* 102 */       return 2;
+/* 103 */     if (clazz.equals(StringTag.class)) {
+/* 104 */       return 8;
+/*     */     }
+/* 106 */     throw new IllegalArgumentException("Invalid tag classs (" + clazz.getName() + ").");
+/*     */   }
+/*     */   
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */ 
+/*     */   public static Class<? extends Tag> getTypeClass(int type)
+/*     */   {
+/* 117 */     switch (type) {
+/*     */     case 0: 
+/* 119 */       return EndTag.class;
+/*     */     case 1: 
+/* 121 */       return ByteTag.class;
+/*     */     case 2: 
+/* 123 */       return ShortTag.class;
+/*     */     case 3: 
+/* 125 */       return IntTag.class;
+/*     */     case 4: 
+/* 127 */       return LongTag.class;
+/*     */     case 5: 
+/* 129 */       return FloatTag.class;
+/*     */     case 6: 
+/* 131 */       return DoubleTag.class;
+/*     */     case 7: 
+/* 133 */       return ByteArrayTag.class;
+/*     */     case 8: 
+/* 135 */       return StringTag.class;
+/*     */     case 9: 
+/* 137 */       return ListTag.class;
+/*     */     case 10: 
+/* 139 */       return CompoundTag.class;
+/*     */     }
+/* 141 */     throw new IllegalArgumentException("Invalid tag type : " + type + ".");
+/*     */   }
+/*     */ }
+
+
+/* Location:              C:\Users\trihebi\Desktop\jnbt-1.1.jar!\org\jnbt\NBTUtils.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       0.7.1
  */
-
-package de.prisemut.mbb.shiptool.jnbt;
-
-import static com.google.common.base.Preconditions.checkNotNull;
-
-import com.sk89q.worldedit.math.Vector3;
-import com.sk89q.worldedit.world.storage.InvalidFormatException;
-
-import java.util.Map;
-
-/**
- * A class which contains NBT-related utility methods.
- *
- */
-public final class NBTUtils {
-
-    /**
-     * Default private constructor.
-     */
-    private NBTUtils() {
-    }
-
-    /**
-     * Gets the type name of a tag.
-     *
-     * @param clazz the tag class
-     * @return The type name.
-     */
-    public static String getTypeName(Class<? extends Tag> clazz) {
-        if (clazz.equals(ByteArrayTag.class)) {
-            return "TAG_Byte_Array";
-        } else if (clazz.equals(ByteTag.class)) {
-            return "TAG_Byte";
-        } else if (clazz.equals(CompoundTag.class)) {
-            return "TAG_Compound";
-        } else if (clazz.equals(DoubleTag.class)) {
-            return "TAG_Double";
-        } else if (clazz.equals(EndTag.class)) {
-            return "TAG_End";
-        } else if (clazz.equals(FloatTag.class)) {
-            return "TAG_Float";
-        } else if (clazz.equals(IntTag.class)) {
-            return "TAG_Int";
-        } else if (clazz.equals(ListTag.class)) {
-            return "TAG_List";
-        } else if (clazz.equals(LongTag.class)) {
-            return "TAG_Long";
-        } else if (clazz.equals(ShortTag.class)) {
-            return "TAG_Short";
-        } else if (clazz.equals(StringTag.class)) {
-            return "TAG_String";
-        } else if (clazz.equals(IntArrayTag.class)) {
-            return "TAG_Int_Array";
-        } else if (clazz.equals(LongArrayTag.class)) {
-            return "TAG_Long_Array";
-        } else {
-            throw new IllegalArgumentException("Invalid tag classs ("
-                    + clazz.getName() + ").");
-        }
-    }
-
-    /**
-     * Gets the type code of a tag class.
-     *
-     * @param clazz the tag class
-     * @return The type code.
-     * @throws IllegalArgumentException if the tag class is invalid.
-     */
-    public static int getTypeCode(Class<? extends Tag> clazz) {
-        if (clazz.equals(ByteArrayTag.class)) {
-            return NBTConstants.TYPE_BYTE_ARRAY;
-        } else if (clazz.equals(ByteTag.class)) {
-            return NBTConstants.TYPE_BYTE;
-        } else if (clazz.equals(CompoundTag.class)) {
-            return NBTConstants.TYPE_COMPOUND;
-        } else if (clazz.equals(DoubleTag.class)) {
-            return NBTConstants.TYPE_DOUBLE;
-        } else if (clazz.equals(EndTag.class)) {
-            return NBTConstants.TYPE_END;
-        } else if (clazz.equals(FloatTag.class)) {
-            return NBTConstants.TYPE_FLOAT;
-        } else if (clazz.equals(IntTag.class)) {
-            return NBTConstants.TYPE_INT;
-        } else if (clazz.equals(ListTag.class)) {
-            return NBTConstants.TYPE_LIST;
-        } else if (clazz.equals(LongTag.class)) {
-            return NBTConstants.TYPE_LONG;
-        } else if (clazz.equals(ShortTag.class)) {
-            return NBTConstants.TYPE_SHORT;
-        } else if (clazz.equals(StringTag.class)) {
-            return NBTConstants.TYPE_STRING;
-        } else if (clazz.equals(IntArrayTag.class)) {
-            return NBTConstants.TYPE_INT_ARRAY;
-        } else if (clazz.equals(LongArrayTag.class)) {
-            return NBTConstants.TYPE_LONG_ARRAY;
-        } else {
-            throw new IllegalArgumentException("Invalid tag classs ("
-                    + clazz.getName() + ").");
-        }
-    }
-
-    /**
-     * Gets the class of a type of tag.
-     *
-     * @param type the type
-     * @return The class.
-     * @throws IllegalArgumentException if the tag type is invalid.
-     */
-    public static Class<? extends Tag> getTypeClass(int type) {
-        switch (type) {
-        case NBTConstants.TYPE_END:
-            return EndTag.class;
-        case NBTConstants.TYPE_BYTE:
-            return ByteTag.class;
-        case NBTConstants.TYPE_SHORT:
-            return ShortTag.class;
-        case NBTConstants.TYPE_INT:
-            return IntTag.class;
-        case NBTConstants.TYPE_LONG:
-            return LongTag.class;
-        case NBTConstants.TYPE_FLOAT:
-            return FloatTag.class;
-        case NBTConstants.TYPE_DOUBLE:
-            return DoubleTag.class;
-        case NBTConstants.TYPE_BYTE_ARRAY:
-            return ByteArrayTag.class;
-        case NBTConstants.TYPE_STRING:
-            return StringTag.class;
-        case NBTConstants.TYPE_LIST:
-            return ListTag.class;
-        case NBTConstants.TYPE_COMPOUND:
-            return CompoundTag.class;
-        case NBTConstants.TYPE_INT_ARRAY:
-            return IntArrayTag.class;
-        case NBTConstants.TYPE_LONG_ARRAY:
-            return LongArrayTag.class;
-        default:
-            throw new IllegalArgumentException("Invalid tag type : " + type
-                    + ".");
-        }
-    }
-
-    /**
-     * Read a vector from a list tag containing ideally three values: the
-     * X, Y, and Z components.
-     *
-     * <p>For values that are unavailable, their values will be 0.</p>
-     *
-     * @param listTag the list tag
-     * @return a vector
-     */
-    public static Vector3 toVector(ListTag listTag) {
-        checkNotNull(listTag);
-        return Vector3.at(listTag.asDouble(0), listTag.asDouble(1), listTag.asDouble(2));
-    }
-
-    /**
-     * Get child tag of a NBT structure.
-     *
-     * @param items the map to read from
-     * @param key the key to look for
-     * @param expected the expected NBT class type
-     * @return child tag
-     * @throws InvalidFormatException
-     */
-    public static <T extends Tag> T getChildTag(Map<String, Tag> items, String key, Class<T> expected) throws InvalidFormatException {
-        if (!items.containsKey(key)) {
-            throw new InvalidFormatException("Missing a \"" + key + "\" tag");
-        }
-        Tag tag = items.get(key);
-        if (!expected.isInstance(tag)) {
-            throw new InvalidFormatException(key + " tag is not of tag type " + expected.getName());
-        }
-        return expected.cast(tag);
-    }
-
-}

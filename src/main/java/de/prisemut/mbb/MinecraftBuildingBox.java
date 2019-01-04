@@ -3,14 +3,12 @@ package de.prisemut.mbb;
 import de.prisemut.mbb.brush.BallBrush;
 import de.prisemut.mbb.brush.BrushManager;
 import de.prisemut.mbb.brush.CubeBrush;
-import de.prisemut.mbb.brush.CylinderBrush;
+import de.prisemut.mbb.brush.LineBrush;
 import de.prisemut.mbb.brush.listener.BrushListener;
 import de.prisemut.mbb.commands.*;
 import de.prisemut.mbb.interior.listener.InventoryListener;
-import de.prisemut.mbb.server.tcp.*;
-import net.royawesome.jlibnoise.module.combiner.Min;
+import de.prisemut.mbb.server.tcp.TCPClient;
 import org.bukkit.Bukkit;
-import java.io.File;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -34,6 +32,10 @@ public class MinecraftBuildingBox extends JavaPlugin {
 
             tcpClient.Connect();
         }
+        File folder = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/ships/");
+        if(!folder.exists()) {
+            folder.mkdirs();
+        }
 
         /*
         Config
@@ -52,8 +54,8 @@ public class MinecraftBuildingBox extends JavaPlugin {
          */
         BrushManager brushManager = new BrushManager();
         brushManager.registerBrush(new CubeBrush(), "cube");
-        brushManager.registerBrush(new CylinderBrush(), "cylinder");
         brushManager.registerBrush(new BallBrush(), "ball");
+        brushManager.registerBrush(new LineBrush(), "line");
 
         /*
         Commands
@@ -65,6 +67,8 @@ public class MinecraftBuildingBox extends JavaPlugin {
         commandHandler.registerNewCommand("fill", new fill_command());
         commandHandler.registerNewCommand("world", new world_Command());
         commandHandler.registerNewCommand("BS", new buildServer_command());
+        commandHandler.registerNewCommand("ship", new ship_command());
+        commandHandler.registerNewCommand("debug", new debug_command());
 
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         file.mkdirs();
