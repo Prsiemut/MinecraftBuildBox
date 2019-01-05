@@ -7,7 +7,9 @@ import de.prisemut.mbb.brush.LineBrush;
 import de.prisemut.mbb.brush.listener.BrushListener;
 import de.prisemut.mbb.commands.*;
 import de.prisemut.mbb.interior.listener.InventoryListener;
+import de.prisemut.mbb.inventory.InventoryManager;
 import de.prisemut.mbb.server.tcp.TCPClient;
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,6 +20,8 @@ public class MinecraftBuildingBox extends JavaPlugin {
     private static MinecraftBuildingBox instance;
     public static String prefix = "§7[§bMBB§7] ";
     TCPClient tcpClient = new TCPClient();
+
+    @Getter public InventoryManager inventoryManager;
 
     @Override
     public void onEnable() {
