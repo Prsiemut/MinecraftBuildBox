@@ -97,4 +97,35 @@ return false;
       }
     };
 
+
+    /*
+    Methods to send and receive schematic files!
+     */
+    public void sendSchematicFile(String schematicfile) throws IOException {
+        File file = new File("MUST DEFINE A FOLDER LATER ON");
+        OutputStream out = socket.getOutputStream();
+        InputStream fileIn = new FileInputStream(file);
+
+        byte[] buffer = new byte[1024];
+        while (fileIn.available() > 0) {
+            out.write(buffer, 0, fileIn.read(buffer));
+        }
+
+        fileIn.close();
+    }
+
+    public void receiveSchematicFile(String schematicfile) throws IOException {
+        InputStream in = socket.getInputStream();
+        FileOutputStream fileOut = new FileOutputStream("MUST DEFINE FILE AND FOLDER LATER ON");
+
+        byte[] buffer = new byte[1024];
+        while (socket.isConnected()) {
+            int bytesRead = in.read(buffer);
+            if (bytesRead == -1) break;
+            fileOut.write(buffer, 0, bytesRead);
+        }
+
+        fileOut.close();
+    }
+
 }
