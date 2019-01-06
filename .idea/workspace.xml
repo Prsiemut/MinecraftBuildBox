@@ -2,16 +2,11 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/math/Cuboid.java" line="31" mnemonic="8" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" line="89" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e41b589b-4add-4ffd-8e10-c6b526720bf1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/prisemut/mbb/MinecraftBuildingBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/prisemut/mbb/MinecraftBuildingBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/prisemut/mbb/server/tcp/TCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/prisemut/mbb/server/tcp/TCPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -99,12 +94,12 @@
       <file leaf-file-name="MinecraftBuildingBox.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+            <state relative-caret-position="255">
+              <caret line="63" column="104" selection-start-line="63" selection-start-column="104" selection-end-line="63" selection-end-column="104" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3501#3502#0" expanded="true" />
-                <element signature="e#3532#3533#0" expanded="true" />
+                <element signature="e#4272#4273#0" expanded="true" />
+                <element signature="e#4303#4304#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -978,12 +973,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/prisemut/mbb/MinecraftBuildingBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+        <state relative-caret-position="255">
+          <caret line="63" column="104" selection-start-line="63" selection-start-column="104" selection-end-line="63" selection-end-column="104" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3501#3502#0" expanded="true" />
-            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#4272#4273#0" expanded="true" />
+            <element signature="e#4303#4304#0" expanded="true" />
           </folding>
         </state>
       </provider>

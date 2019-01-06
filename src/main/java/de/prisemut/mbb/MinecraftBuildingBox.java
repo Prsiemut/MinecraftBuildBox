@@ -15,6 +15,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Server;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.spongepowered.api.event.command.TabCompleteEvent;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,24 +45,25 @@ public class MinecraftBuildingBox extends JavaPlugin {
         File folder = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/ships/");
         if(!folder.exists()) {
             folder.mkdirs();
-            console.sendMessage(ChatColor.WHITE + "[MBB]" + ChatColor.GREEN + "Created ship folder!");
+            console.sendMessage(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Created ship folder!");
         }
         File tcpFolder = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/tcp/");
         if(!tcpFolder.exists()) {
             tcpFolder.mkdirs();
+            console.sendMessage(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Created tcp folder!");
         }
         //Check if File exists -> enable the TCP Client
         File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/tcp/TCP.Client");
         if(f.exists()){
-            System.out.println("Enabling TCP Client...");
+            System.out.println(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Enabling TCP Client...");
             tcpClient.Connect();
-        } else {
-            try {
-                f.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
+        File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
+        if(!file.exists()) {
+            file.mkdirs();
+            console.sendMessage(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Created schemtic folder!");
+        }
+        console.sendMessage(ChatColor.WHITE + "[MBB] Loaded all files/created all files!");
 
 
 
@@ -69,6 +71,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         Config
          */
         Config.setup();
+        console.sendMessage(ChatColor.WHITE + "[MBB] Loaded configurations!");
 
         /*
         Listener
@@ -76,6 +79,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new InventoryListener(), this);
         Bukkit.getPluginManager().registerEvents(new BrushListener(), this);
         Bukkit.getPluginManager().registerEvents(new JoinListener(), this);
+        console.sendMessage(ChatColor.WHITE + "[MBB] Loaded all listener!");
 
         /*
         Brushes
@@ -84,6 +88,7 @@ public class MinecraftBuildingBox extends JavaPlugin {
         brushManager.registerBrush(new CubeBrush(), "cube");
         brushManager.registerBrush(new BallBrush(), "ball");
         brushManager.registerBrush(new LineBrush(), "line");
+        console.sendMessage(ChatColor.WHITE + "[MBB] Loaded 3 Brushes!");
 
         /*
         Commands
@@ -97,11 +102,9 @@ public class MinecraftBuildingBox extends JavaPlugin {
         commandHandler.registerNewCommand("BS", new buildServer_command());
         commandHandler.registerNewCommand("ship", new ship_command());
         commandHandler.registerNewCommand("debug", new debug_command());
+        console.sendMessage(ChatColor.WHITE + "[MBB] Loaded 1 main command and 8 subcommands.");
 
-        File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
-        file.mkdirs();
-        File file2 = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/hmaps/");
-        file2.mkdirs();
+
 
 
     }
