@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.WeakHashMap;
 
 /**
- * @author Joschy
  *
  * Diese Klasse kontrolliert alle InteractiveInventories.
  * Es werden alle Instancen von geöffneten Inventories gespeichert und bei
