@@ -11,10 +11,17 @@ import de.prisemut.mbb.inventory.InventoryManager;
 import de.prisemut.mbb.server.tcp.TCPClient;
 import lombok.Getter;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Server;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.io.IOException;
 
+/**
+  @author Prisemut
+ */
 public class MinecraftBuildingBox extends JavaPlugin {
 
     private static MinecraftBuildingBox instance;
@@ -28,18 +35,35 @@ public class MinecraftBuildingBox extends JavaPlugin {
         super.onEnable();
         instance = this;
         System.out.println("[MBB] Loading...");
+        Server server = getServer();
+        ConsoleCommandSender console = server.getConsoleSender();
 
-        //Check if File exists -> enable the TCP Client
-        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/TCP.Client");
-        if(f.exists()){
-            System.out.println("Enabling TCP Client...");
-
-            tcpClient.Connect();
-        }
+        /*
+        File part
+         */
         File folder = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/ships/");
         if(!folder.exists()) {
             folder.mkdirs();
+            console.sendMessage(ChatColor.WHITE + "[MBB]" + ChatColor.GREEN + "Created ship folder!");
         }
+        File tcpFolder = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/tcp/");
+        if(!tcpFolder.exists()) {
+            tcpFolder.mkdirs();
+        }
+        //Check if File exists -> enable the TCP Client
+        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/tcp/TCP.Client");
+        if(f.exists()){
+            System.out.println("Enabling TCP Client...");
+            tcpClient.Connect();
+        } else {
+            try {
+                f.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
 
         /*
         Config
