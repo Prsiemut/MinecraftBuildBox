@@ -16,26 +16,24 @@ public class buildServer_command implements CommandInterface {
     public void run(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
         Messages messages = new Messages(player);
+        //mbb BS [send | license] <msg>;
 
-        if(args[1].equals("BS")){
-            if(args[3].equals("send")) {
-                if(args.length == 4) {
-                    tcpClient.send(args[4]);
-                    messages.sendMessage("try to send message to server");
+        if(args.length >= 2 && args.length <= 3) {
+            if (args[1].equals("send")) {
+                if (args.length == 3) {
+                    tcpClient.send(args[2]);
+                    messages.sendMessage("Tryed to send the message to server!");
+                } else {
+                    messages.sendMessage("Please enter a Message to!");
                 }
-                else {
-            messages.sendMessage("Please enter a Message to!");
-                }
+            } else if (args[1].equals("license")) {
+                tcpClient.send("Player asking for permissions!");
+            } else {
+                messages.sendMessage(usage());
             }
-
-        } else if(args[1].equals("License")) {
-
-            messages.sendMessage("Not implementet yet");
-        }
-         else {
+        } else {
             messages.sendMessage(usage());
         }
-
     }
 
     @Override

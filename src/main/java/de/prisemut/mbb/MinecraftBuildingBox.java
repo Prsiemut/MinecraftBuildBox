@@ -47,22 +47,26 @@ public class MinecraftBuildingBox extends JavaPlugin {
             folder.mkdirs();
             console.sendMessage(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Created ship folder!");
         }
+
         File tcpFolder = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/tcp/");
         if(!tcpFolder.exists()) {
             tcpFolder.mkdirs();
             console.sendMessage(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Created tcp folder!");
         }
+
         //Check if File exists -> enable the TCP Client
         File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/tcp/TCP.Client");
-        if(f.exists()){
-            System.out.println(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Enabling TCP Client...");
+        if(f.exists()) {
+            console.sendMessage(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Enabling TCP Client...");
             tcpClient.Connect();
         }
+
         File file = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/schematics/");
         if(!file.exists()) {
             file.mkdirs();
             console.sendMessage(ChatColor.WHITE + "[MBB] " + ChatColor.GREEN + "Created schemtic folder!");
         }
+
         console.sendMessage(ChatColor.WHITE + "[MBB] Loaded all files/created all files!");
 
 

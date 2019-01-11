@@ -1,6 +1,8 @@
 package de.prisemut.mbb.server.tcp;
 
 import de.prisemut.mbb.*;
+import org.bukkit.Server;
+import org.bukkit.command.ConsoleCommandSender;
 
 import java.io.*;
 import java.net.Socket;
@@ -34,16 +36,16 @@ public class TCPClient {
             msgToServer.flush();
         }
         catch (Exception ex){
-            System.out.println("Error on sending Message to Server");
+            System.out.println("[MBB] Error on sending Message to Server!");
         }
     }
 
     public void Connect() {
         try {
             InetAddress host = InetAddress.getByName("localhost"); //TODO: Enter the final host, not sure wich Server I will use atm
-            System.out.println("Connecting to Server... ");
+            System.out.println("[MBB] Connecting to Server... ");
             socket = new Socket(host, serverPort);
-            System.out.println("Successfully connected to Server");
+            System.out.println("[MBB] Successfully connected to Server!");
             runThread.start();
         }
         catch (Exception ex){
@@ -53,9 +55,9 @@ public class TCPClient {
     }
 
     private boolean enabled(){
-        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/TCP.Client");
+        File f = new File(MinecraftBuildingBox.getInstance().getDataFolder() + "/tcp/" +"TCP.Client");
         if(!f.exists()){
-            System.out.println("Disable TCP Client...");
+            System.out.println("[MBB] Disable TCP Client...");
                  closing = true;
 return false;
                    }
